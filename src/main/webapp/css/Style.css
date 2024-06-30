@@ -1,0 +1,205 @@
+/* 
+  Author : Khushboo Jamodkar ;
+  Theme:Cravecrafter ;
+  Version: 1.0;
+*/
+/* css for all*/
+
+
+.container{
+    width: 80%;
+    margin: 0 auto ;
+    padding: 2%;
+    
+}
+
+.img-reponsive
+{
+ width:20%
+}
+.text-right
+{
+text-align:right;
+}
+.text-center
+{
+ text-align: center; 
+}
+
+.Menu
+{
+  text-align: right;
+}
+
+.clearfix
+{
+  clear:both;
+  float: none;
+}
+
+
+a
+{
+  color: #c0392b;
+  text-decoration: none;
+}
+a:hover
+{
+  color:#e74c3c ;
+}
+
+.btn
+{
+  padding: 1%;
+  border: none;
+  font-size: 1rem; 
+  border-radius: 5px;
+}
+
+.btn-primary
+{
+ background-color:#c0392b;
+ color: #ecf0f1;
+ cursor: pointer;
+}
+ .btn-primary:hover
+ {
+  color: white;
+  background-color: #e74c3c;
+ }
+
+ h2{
+  color:#2c3e50 ;
+  font-size:  2rem;
+ }
+
+
+ .float-container
+ {
+  position: relative;
+ }
+
+ .float-text
+ {
+  position: absolute;
+ }
+/* css for navbar section */
+
+.logo{
+  width:20%;
+  float:left;
+}
+
+.Menu
+{
+  line-height: 0px;
+}
+.Menu ul {
+  list-style-type: none;
+}
+
+.Menu ul li
+{
+ display: inline;
+ padding: 1%;
+ font-weight:bold;
+}
+
+/* css for Food search section*/
+
+.Food-menu-search
+{
+  background-image: url(../Images/CC1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 15% 5%;
+} 
+
+
+.Food-menu-search input[type="search"]
+{
+  width: 50%;
+  padding: 1%;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+}
+
+
+
+
+/* css for food menu */
+
+.food-menu
+{
+ background-color:aquamarine;
+ padding: 4% 0;
+}
+.food-menu-box
+{
+
+  width:45%;
+  margin:1%;
+  padding: 1%;
+  float:left;
+  background-color: white;
+  border-radius: 15px;
+}
+
+.food-menu-img
+{
+  width: 500%;
+  float: middle;
+}
+
+.food-menu-desc
+{
+width:70%;
+float: left;
+margin-left: 15%;
+}
+
+.food-detail
+{
+  font-size: 1rem;
+  color:#34495e ;
+}
+
+/* css for social */
+
+.Social ul
+{
+  list-style-type: none;
+}
+.Social ul li
+{
+  display: inline;
+  padding: 1%;
+}
+
+.addbtn
+{
+  top: 50px;
+  position: relative;
+  background-color: aliceblue;
+  color: rebeccapurple;
+  font-size: 15px;
+  width: 50px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.submitbtn
+{
+  top: 50px;
+  font-size: 20px;
+  background-color: aquamarine;
+  color: black;
+  position: relative;
+  left: 90%;
+  margin:50px;
+  padding: 5px;
+  border-radius: 10px;
+} 

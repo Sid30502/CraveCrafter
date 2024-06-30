@@ -1,0 +1,205 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="./Images/add_to_cart.js"></script>
+
+<link rel="stylesheet" href="./css/Style.css"> 
+<style>
+	.column {
+	  float: left;
+	  width: 25%;
+	}
+	
+	.row:after {
+	  content: "";
+	  display: table;
+	  clear: both;
+	}
+	
+	@media screen and (max-width: 600px) {
+	  .column {
+		width: 100%;
+	  }
+	}
+	
+	.checked {
+	  color: orange;
+	}
+	.topnav {
+	  overflow: hidden;
+	  background-color: #333;
+	}
+	
+	.topnav a {
+	  float: left;
+	  color: #f2f2f2;
+	  text-align: center;
+	  padding: 14px 16px;
+	  text-decoration: none;
+	  font-size: 17px;
+	}
+	#a1
+	{
+	 color: blue;
+	 text-decoration: none;
+	}
+	.topnav a:hover {
+	  background-color: #ddd;
+	  color: black;
+	}
+	.submitbtn{
+		left:60%;
+	}
+
+	</style>
+<p><b><h1>Konark</h1></b></p>
+<div class="row">
+	<div class="column">
+	<table>
+	       <tr>
+	       <td><img height="300px" width="200px" src="./Images/Veg thali.jpeg"/></td>
+	       <td>
+		<i class="fa fa-heart-o" style="font-size:40px;color:palevioletred"></i>
+		<h4>Veg Thali</h4>
+		<b>Rs.80</Rs></b><br><br>
+		<input type="button" onclick="add_menu ('Veg Thali',80)" class="addbtn" name="" id="btn" value="Add">
+	       </td>
+	       </tr>
+	</table>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star"></span>
+	</div>
+	<div class="column">
+	<table>
+	       <tr>
+	       <td><img height="300px" width="200px" src="./Images/Bhaji roti.jpeg"/></td>
+	       <td>
+		<i class="fa fa-heart-o" style="font-size:40px;color:palevioletred"></i>
+		<h4>Bhaji roti</h4>
+		<b>Rs.50</Rs></b><br><br>
+		<input type="button" onclick="add_menu ('Bhaji roti',50)"  class="addbtn" name="" id="btn" value="Add">
+	       </td>
+	       </tr>
+	</table>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star"></span>
+		<span class="fa fa-star"></span>
+	</div>
+	<div class="column">
+	<table>
+	       <tr>
+	       <td><img height="300px" width="200px" src="./Images/Dal Rice.jpeg"/></td>
+	       <td>
+		<i class="fa fa-heart-o" style="font-size:40px;color:palevioletred"></i>
+		<h4>Dal rice</h4>
+		<b>Rs.40</Rs></b><br><br>
+		<input type="button" onclick="add_menu ('Dal rice',40)"  class="addbtn" name="" id="btn" value="Add">
+	       </td>
+	       </tr>
+	</table>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star"></span>
+		<span class="fa fa-star"></span>
+	</div>
+	<div class="column">
+	<table>
+	       <tr>
+	       <td><img height="300px" width="200px" src="./Images/Bhaji Bhakari.jpeg"/></td>
+	       <td>
+		<i class="fa fa-heart-o" style="font-size:40px;color:palevioletred"></i>
+		<h4>Bhaji Bhakari</h4>
+		<b>Rs.60</Rs></b><br><br>
+		<input type="button" onclick="add_menu ('Bhaji Bhakari',50)"  class="addbtn" name="" id="btn" value="Add">
+	       </td>
+	       </tr>
+	</table>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+	</div>
+</div>
+
+<br><br>
+
+<div class="row">
+	<div class="column">
+	<table>
+	       <tr>
+	       <td><img height="300px" width="200px" src="./Images/Chicken Thali.jpeg"/></td>
+	       <td>
+		<i class="fa fa-heart-o" style="font-size:40px;color:palevioletred"></i>
+		<h4>Chicken Thali</h4>
+		<b>Rs.120</Rs></b><br><br>
+		<input type="button" onclick="add_menu ('Chicken Thali',120)"  class="addbtn" name="" id="btn" value="Add">
+	       </td>
+	       </tr>
+	</table>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star"></span>
+		<span class="fa fa-star"></span>
+	</div>
+	<div class="column">
+	<table>
+	       <tr>
+	       <td><img height="300px" width="200px" src="./Images/Egg curry.jpeg"/></td>
+	       <td>
+		<i class="fa fa-heart-o" style="font-size:40px;color:palevioletred"></i>
+		<h4>Egg Thali</h4>
+		<b>Rs.90</Rs></b><br><br>
+	    <input type="button" onclick="add_menu ('Egg Thali',90)"  class="addbtn" name="" id="btn" value="Add">
+	       </td>
+	       </tr>
+	</table>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star"></span>
+	</div>
+	<div class="column">
+	<table>
+	       <tr>
+	       <td><img height="300px" width="200px" src="./Images/Mutton Curry.jpeg"/></td>
+	       <td>
+		<i class="fa fa-heart-o" style="font-size:40px;color:palevioletred"></i>
+		<h4>Mutton Thali</h4>
+		<b>Rs.130</b><br><br>
+		<input type="button" onclick="add_menu ('Mutton Thali',130)" class="addbtn" name="" id="btn" value="Add">
+	       </td>
+	       </tr>
+	</table>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star"></span>
+	</div>
+	<div class="column">
+	<table>
+	       <tr>
+	       <td><img height="300px" width="200px" src="./Images/Veg Biryani.jpeg"/></td>
+	       <td>
+		<i class="fa fa-heart-o" style="font-size:40px;color:palevioletred"></i>
+		<h4>Biryani</h4>
+		<b>Rs.190</b><br><br>
+		<input type="button" onclick="add_menu ('Biryani',190)"  class="addbtn" name="" id="btn" value="Add">
+	       </td>
+	       </tr>
+	</table>
+	<div>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star"></span>
+	</div>
+	<input type="button" onclick="show()"class="submitbtn" value="Submit"></div>

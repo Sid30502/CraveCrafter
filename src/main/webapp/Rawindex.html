@@ -1,0 +1,186 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<style>
+    .badge-notify{
+      background:red;
+      position:relative;
+      top: -20px;
+      right: 10px;
+    }
+    .my-cart-icon-affix {
+      position: fixed;
+      z-index: 999;
+    }
+    </style>
+<style>
+a >img  {
+  border-radius: 50%;
+  height: 200px;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+footer {
+  margin-top: 30px;
+  background-color: #EA2014;
+  padding: 20px;
+  color:#f2f2f2;
+}
+
+footer > ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer > ul > li {
+  padding: 0 10px;
+}
+
+footer > ul > li.nostyle  {
+	list-style-type:none;
+}
+
+footer > ul > li > a {
+	background-color:#EA2014;
+	color:#f2f2f2;
+}
+
+footer > span {
+  margin-top: 5px;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.9em;
+  color: #f2f2f2;
+}
+
+</style>
+</head>
+<body>
+    <img align="left" src="img/brand/logo6.png"/>
+    <h3 style="text-align:right;color:greenyellow;">Priyanka Online Traditional Shopping</h3>
+    <div id="slideshow">
+        <div class="page-header">
+            <h1>
+              <div style="float: right; cursor: pointer;">
+                <span class="glyphicon glyphicon-shopping-cart my-cart-icon"><span class="badge badge-notify my-cart-badge"></span></span>
+              </div>
+            </h1>
+            <h1>
+                <div style="float: right; cursor: pointer;">
+                  <span class="glyphicon glyphicon-log-out" onclick="LogOut();"></span>
+                </div>
+              </h1>
+            
+          </div>
+          <div class="row">
+   
+        </div>
+    </div>
+  <h2 style="text-align: center;"><b>Collections</b></h2>
+<table width="100%">
+	<tr>
+	<td><center><a href="/Salwar.html"><img class="pcol" src="img/collections/salwar.jpg" alt="Salwar" style="width:200px"></a></center><br>
+      <center>Salwar</center></td>
+	<td><center><a href="/saree.html"><img class="pcol" src="img/collections/saree.jpeg" alt="saree" style="width:200px"></a></center><br><center>Saree</center></td>
+	<td><center><a href="/Bridalwear.html"><img class="pcol" src="img/collections/bridal.jpg" alt="bridal" style="width:200px"></a></center><br> <center>Bridalwear</center></td>
+	<td><center><a href="Ethnicwear.html"><img class="pcol" src="img/collections/Ethnicwear.jpg" alt="Ethnicwear" style="width:200px"></a></center><br> <center>Ethnicwear</center></td>
+	<br><br><br>
+	<tr>
+	<td><center><a href="/Shrug.html"><img class="pcol" src="img/collections/shrug.jpeg" alt="Shrug" style="width:200px"></a></center><br> <center>Shrug</center></td>
+	<td><center><a href="/Casuals.html"><img class="pcol" src="img/collections/casual.jpg" alt="Casuals" style="width:200px"></a></center><br> <center>Casuals</center></td>
+	<td><center><a href="T_Shirt.html"><img class="pcol" src="img/collections/tshirt.jpg" alt="T-Shirt" style="width:200px"></a></center><br> <center>T-Shirt</center></td>
+	<td><center><a href="Palazo.html"><img class="pcol" src="img/collections/Palazo.jpeg" alt="Palazo" style="width:200px"></a></center><br> <center>Palazo</center></td>
+	</tr>
+</table>
+<script src="js/jquery-2.2.3.min.js"></script>
+  <script type='text/javascript' src="js/bootstrap.min.js"></script>
+  <script type='text/javascript' src="js/jquery.mycart.js"></script>
+  <script type="text/javascript">
+      var orderID = localStorage.getItem("orderID");
+      function LogOut(){
+        sessionStorage.removeItem("priyankaLogin");
+        window.location="Loging.html";
+      }
+  $(function () {
+
+    var goToCartIcon = function($addTocartBtn){
+      var $cartIcon = $(".my-cart-icon");
+      var $image = $('<img width="30px" height="30px" src="' + $addTocartBtn.data("image") + '"/>').css({"position": "fixed", "z-index": "999"});
+      $addTocartBtn.prepend($image);
+      var position = $cartIcon.position();
+      $image.animate({
+        top: position.top,
+        left: position.left
+      }, 500 , "linear", function() {
+        $image.remove();
+      });
+    }
+
+    $('.my-cart-btn').myCart({
+      currencySymbol: '₹',
+      classCartIcon: 'my-cart-icon',
+      classCartBadge: 'my-cart-badge',
+      classProductQuantity: 'my-product-quantity',
+      classProductRemove: 'my-product-remove',
+      classCheckoutCart: 'my-cart-checkout',
+      affixCartIcon: true,
+      showCheckoutModal: true,
+      numberOfDecimals: 2,
+      cartItems: [
+       ],
+      clickOnAddToCart: function($addTocart){
+        goToCartIcon($addTocart);
+      },
+      afterAddOnCart: function(products, totalPrice, totalQuantity) {
+        console.log("afterAddOnCart", products, totalPrice, totalQuantity);
+      },
+      clickOnCartIcon: function($cartIcon, products, totalPrice, totalQuantity) {
+        console.log("cart icon clicked", $cartIcon, products, totalPrice, totalQuantity);
+      },
+      checkoutCart: function(products, totalPrice, totalQuantity) {
+        orderID+=1;
+        //alert(checkoutString)
+        localStorage.setItem("priyankaOrder",JSON.stringify(products));
+        console.log("checking out", products, totalPrice, totalQuantity);
+       
+        alert("Order placed Successfully with Order Id : "+orderID+" \n Total Price : "+totalPrice);
+        localStorage.setItem("priyankaCart",{});
+        localStorage.setItem("orderID",orderID);
+      },
+      getDiscountPrice: function(products, totalPrice, totalQuantity) {
+        console.log("calculating discount", products, totalPrice, totalQuantity);
+        return totalPrice * 1;
+      }
+    });
+
+    
+  });
+  
+  $( window ).unload(function() {
+    var priyankaCart = localStorage.getItem("__mycart");
+    if(priyankaCart != null && priyankaCart != 'undefined')
+        localStorage.setItem("priyankaCart",priyankaCart);
+});
+$( window ).load(function() {
+    localStorage.setItem("orderID",0);
+    var priyankag = sessionStorage.getItem("priyankaLogin");
+    if(priyankaLogin != null && priyankaLogin != 'undefined')
+    {
+
+    }else{
+        alert("Please Login First");
+        window.location="Loging.html";
+    }
+var priyankaCart = localStorage.getItem("priyankaCart");
+if(priyankaCart != null && priyankaCart != 'undefined')
+    localStorage.setItem("__mycart",priyankaCart);
+  });
+  </script>
+</body>
+</html>
